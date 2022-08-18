@@ -1,0 +1,47 @@
+/*
+  CollectStrings Solution: Pure Recursion Version
+
+    var stringsArr = [];
+    for(var key in obj) {
+        if(typeof obj[key] === 'string') {
+            stringsArr.push(obj[key]);
+        }
+        else if(typeof obj[key] === 'object') {
+            stringsArr = stringsArr.concat(collectStrings(obj[key]));
+        }
+    }
+ 
+    return stringsArr;
+
+*/
+
+function collectStrings(obj) {
+  var stringArr = []
+  for (let key in obj) {
+    if (typeof obj[key] === 'string') {
+      stringArr.push(obj[key])
+    } else if (typeof obj[key] === 'object') {
+      stringArr = stringArr.concat(collectStrings(obj[key]));
+    }
+  }
+  console.log(stringArr)
+  return stringArr
+}
+
+const obj = {
+  stuff: "foo",
+  data: {
+      val: {
+          thing: {
+              info: "bar",
+              moreInfo: {
+                  evenMoreInfo: {
+                      weMadeIt: "baz"
+                  }
+              }
+          }
+      }
+  }
+}
+
+collectStrings(obj)
