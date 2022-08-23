@@ -18,13 +18,13 @@
   
 ❌ Bubble Sort
 
-❌ Selection Sort
-
-❌ Insertion Sort
-
 ❌ Merge Sort
 
 ❌ Quick Sort
+
+❌ Selection Sort
+
+❌ Insertion Sort
 
 ❌ Radix Sort
 
