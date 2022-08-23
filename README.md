@@ -10,11 +10,11 @@
 
 ### Searching Algorithms
 
-  ❌ Linear Search
+  ✅ Linear Search
   
-  ❌ Binary Search
+  ✅ Binary Search
   
-  ❌ Naive String Search
+  ✅ Naive String Search
   
 ❌ Bubble Sort
 

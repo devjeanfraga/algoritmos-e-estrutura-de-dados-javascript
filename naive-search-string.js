@@ -10,3 +10,5 @@ function naiveSearchString ( long, short  ) {
 }
 
 naiveSearchString('lolohelolo helo bbaloloby hallolo', 'lo')
+
+// 9 
