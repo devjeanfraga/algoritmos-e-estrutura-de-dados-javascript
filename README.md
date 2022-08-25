@@ -2,11 +2,11 @@
 
 ### Requirements
 
-✅ Big O Notation
+  ✅ Big O Notation
 
-✅ Frequency Counter Pattern
+  ✅ Frequency Counter Pattern
 
-✅ Recursion 
+  ✅ Recursion 
 
 ### Searching Algorithms
 
@@ -15,18 +15,20 @@
   ✅ Binary Search
   
   ✅ Naive String Search
+
+### Sort Algorithms
   
-❌ Bubble Sort
+  ✅ Bubble Sort
 
-❌ Merge Sort
+  ❌ Merge Sort
 
-❌ Quick Sort
+  ❌ Quick Sort
 
-❌ Selection Sort
+  ❌ Selection Sort
 
-❌ Insertion Sort
+  ❌ Insertion Sort
 
-❌ Radix Sort
+  ❌ Radix Sort
 
 ### Data Structures
 
