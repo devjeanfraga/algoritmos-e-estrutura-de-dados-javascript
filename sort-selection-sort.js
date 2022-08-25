@@ -2,6 +2,26 @@
   SELECTION SORT 
 */
 
+/*
+  Big-O Notation
+  Complexidade de tempo ao quadrado, 
+  Não é muito eficiente pq temos que comparar todos os elementos 
+  com todos os outros elementos da matriz 
+*/
+
+/*
+  VANTAGENS 
+  Existe apenas um possível cenário em que o selection sort 
+  pode ser mais eficiênte que ,tipo, o bubble sort, que é: 
+  Se por algum motivo desejo minimizar o número de swaps. 
+
+  DIFERENÇAS
+   No bubble sort estamos fazendo swaps repedidamente até obter 
+   o maior item no final da lista. 
+   No selection sort fazemos muitas comparações mas apenas uma troca
+   ao final de cada loop.  
+
+*/
 const swap = ( arr, left, right ) => [arr[left], arr[right]] =  [arr[right], arr[left]];
 const swap2 = (arr, left, right) => {
   let temp =  arr[left];
