@@ -6,6 +6,12 @@
   BIG-O NOTATION 
     eficiente caso oestajamos recebendo dados de forma online em um array 
     insertionSort poderá classificar um parte da lista 
+  
+  time-complexity (best) =     O(n)
+  time-complexity (average) =  O(n2)
+  time-complextiy (worst) =    O(n2)
+  space-complexity =           O(1)
+
 */
 
 function insertionSort (arr) {

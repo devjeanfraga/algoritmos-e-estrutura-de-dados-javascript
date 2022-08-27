@@ -1,5 +1,17 @@
 /*
-  SORT 
+  BUBBLE SORT 
+*/
+
+/*
+  BIG-O NOTATION  
+    O(n) para listas quase ordenadas
+    O(n2)  para listas não ordenadas, por conta do aninhamento de loops 
+
+
+  time-complexity (best) =     O(n)
+  time-complexity (average) =  O(n2)
+  time-complextiy (worst) =    O(n2)
+  space-complexity =           O(1)
 */
 
 const sortItems = ( a, b ) => a -b;
@@ -45,9 +57,5 @@ bubbleSort([8,1,2,3,4,5,6,7]);
 
 
 
-/*
-  BIG-O NOTATION  
-    O(n) para listas quase ordenadas
-    O(n2)  para listas não ordenadas, por conta do aninhamento de loops 
-*/
+
 

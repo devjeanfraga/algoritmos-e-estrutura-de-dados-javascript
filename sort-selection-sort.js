@@ -7,6 +7,12 @@
   Complexidade de tempo ao quadrado, 
   Não é muito eficiente pq temos que comparar todos os elementos 
   com todos os outros elementos da matriz 
+  
+  time-complexity (best) =     O(n2)
+  time-complexity (average) =  O(n2)
+  time-complextiy (worst) =    O(n2)
+  space-complexity =           O(1)
+
 */
 
 /*
