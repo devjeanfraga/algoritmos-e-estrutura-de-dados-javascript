@@ -2,6 +2,12 @@
   INSERTION SORT
 */
 
+/*
+  BIG-O NOTATION 
+    eficiente caso oestajamos recebendo dados de forma online em um array 
+    insertionSort poderá classificar um parte da lista 
+*/
+
 function insertionSort (arr) {
   let currentVal;
   for (let i = 1; i < arr.length; i++) {
