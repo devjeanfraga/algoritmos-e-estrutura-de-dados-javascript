@@ -26,7 +26,7 @@
 
   ✅ Selection Sort
 
-  ❌ Insertion Sort
+  ✅ Insertion Sort
 
   ❌ Radix Sort
 
