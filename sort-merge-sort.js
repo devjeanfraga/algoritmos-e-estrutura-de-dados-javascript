@@ -1,5 +1,14 @@
 /*
   MERGE SORT 
+
+
+  ---Big-O Notation---
+
+  Time commplexity(Best) - O(n logn )
+  Time commplexity(Average) - O(n logn )
+  Time commplexity(Worst) - O(n logn )
+  Space commplexity - O(n)
+
 */
 
 function merge (arr1, arr2) {
