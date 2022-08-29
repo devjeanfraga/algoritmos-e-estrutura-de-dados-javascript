@@ -20,6 +20,8 @@
   
   ✅ Bubble Sort
 
+  ✅ cocktail Shaker Sort
+
   ✅ Merge Sort
 
   ❌ Quick Sort
