@@ -56,6 +56,51 @@ function bubbleSort (arr) {
 bubbleSort([8,1,2,3,4,5,6,7]);
 
 
+/*
+  Cocktail Shaker Sort
+    This algorithm extends Bubble Sort by operating in two directions.
+    Instead (em vez de) going from the start to finish, and repeat that,
+    ist goes from start to finish, and then from finish to start again in a
+    single full interation. 
 
+    Esse algoritmo estende o Bubble Sort operando em duas direções. 
+    Em vez de ir do início ao fim e repetir isso, vai do início ao fim e 
+    depois do fim ao início novamente, em uma única iteração completa. 
+    Efetivamente, ele realiza o dobro do trabalho do Bubble Sort em uma 
+    única iteração completa, embora na prática ele normalmente não execute 
+    duas vezes mais rápido.
 
+*/
+
+function cocktailShakerSort(inputArr) {
+
+  let n = inputArr.length;
+  let sorted = false;
+
+  while (!sorted) {
+      sorted = true;
+      for (let i = 0; i < n - 1; i++) {
+          if (inputArr[i] > inputArr[i + 1]){
+             let tmp = inputArr[i];
+             inputArr[i] = inputArr[i + 1];
+             inputArr[i+1] = tmp;
+             sorted = false;
+          }
+ }
+
+ if (sorted)
+     break;
+ sorted = true;
+
+      for (let j = n - 1; j > 0; j--) {
+          if (inputArr[j-1] > inputArr[j]) {
+              let tmp = inputArr[j];
+              inputArr[j] = inputArr[j + 1];
+              inputArr[j+1] = tmp;
+              sorted = false;
+          }
+      }
+  }
+  return inputArr;
+}
 
