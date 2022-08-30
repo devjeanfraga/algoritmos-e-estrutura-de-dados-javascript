@@ -24,7 +24,9 @@
 
   ✅ Merge Sort
 
-  ❌ Quick Sort
+  ✅ Quick Sort
+
+  ❌ Heap Sort
 
   ✅ Selection Sort
 
