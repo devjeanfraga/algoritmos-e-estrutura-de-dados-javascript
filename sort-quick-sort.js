@@ -24,6 +24,18 @@ const pivotHelper = (arr, start = 0 , end = arr.length-1 ) => {
   return swapIndex;
 }
 
+function quickSort (arr, left = 0 , right = arr.length-1) {
+  if( left < right ) {
+    const pivotIndex =  pivotHelper(arr, left, right)
+    //left
+    quickSort(arr, left, pivotIndex - 1)
+    //right
+    quickSort(arr, pivotIndex+1, right)
+  }
+  console.log(arr)
+  return arr; 
+}
 
+quickSort([0.9,3,1,-2,10,8,5,3.5])
 
 
