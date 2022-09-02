@@ -32,7 +32,7 @@
 
   ✅ Insertion Sort
 
-  ❌ Radix Sort
+  ✅ Radix Sort
 
 ### Data Structures
 
