@@ -37,7 +37,7 @@ class SinglyLinkedList  {
     this.tail = null;
     this.length = 0;
   }
-
+  
   /* INSERÇÃO DE VALORES NO FINAL DA LISTA */
   push (value) {
     const newNode = new Node(value);
@@ -49,9 +49,6 @@ class SinglyLinkedList  {
       this.tail = newNode;
     }
   }
-
-
-
 }
 
 
