@@ -137,6 +137,18 @@ class SinglyLinkedList  {
       return this; //retorna a lista 
     }
 
+    get (index) {
+      if (index < 0 || index >= this.length ) return null; 
+      let current =  this.head;
+      let counter = 0 
+
+      while (index !== counter) {
+        current = current.next;
+        counter++; 
+      }
+      return current.value; 
+    }
+
 }
 
 
