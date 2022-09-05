@@ -111,7 +111,7 @@ class SinglyLinkedList  {
       return currentHead.value;
     }
   
-    /* 
+  /* 
     ADICIONAR VALORES NO INÍCIO DA LISTA
     [Pseudo code]
     
@@ -146,8 +146,20 @@ class SinglyLinkedList  {
         current = current.next;
         counter++; 
       }
-      return current.value; 
+      return current; 
     }
+
+    set (index, value) {
+      let foundNode = this.get(index);
+      if (foundNode) { 
+        foundNode.value = value;
+        return true;
+      }
+      return false;   
+    }
+
+   
+
 
 }
 
