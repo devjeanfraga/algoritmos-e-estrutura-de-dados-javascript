@@ -198,6 +198,21 @@ class SinglyLinkedList  {
       return removed; 
     }
 
+    reverse () {
+      let node = this.head; // abrigar o início da lista numa variável; 
+      this.head = this.tail; // atribuir o inicio da lista ao final da lista;
+      this.tail = node; // atribuir o final da lista ao início da lista que está abrigado numa variável;
+      let prev = null; // atribuir prev a null, pois devemos garantir que o proximo será null   
+      let next; // declarar a variável que vai abrigar o valor do próximo node;
+      for (let i = 0; i < this.length; i++) {
+          next = node.next; // guardando meu next temporariamente; 
+          node.next = prev; // reatribuindo o next pra null;
+          prev = node; //  reatribuindo o prev que era null para node que é this.head  
+          node = next; // atrinbuindo o node [this.head] para next[node.next]  
+      }
+      return this; 
+  }
+
 
     print () {
       var arr = [];
