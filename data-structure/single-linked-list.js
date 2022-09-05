@@ -49,6 +49,27 @@ class SinglyLinkedList  {
       this.tail = newNode;
     }
   }
+  
+  /* REMOÇÃO DE VALORES NO FINAL DA LISTA */
+  pop () {
+    if(!this.head) return undefined; 
+    let current = this.head;
+    let newTail =  current;
+
+    while (current.next !== null) {
+        newTail = current //valor atual
+        current =  current.next // indo pro próximo valor
+    }
+
+    this.tail = newTail; // defini a nova calda
+    this.tail.next = null; // redefini o next 
+    this.length-- // diminui o lenght da lista
+    if (this.length === 0 ) { 
+        this.head = null;
+        this.tail = null;
+    }
+    return current; // retorna o valor removido do final da lista
+  }
 }
 
 
