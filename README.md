@@ -36,7 +36,7 @@
 
 ### Data Structures
 
-  ❌ Single linked List
+  ✅ Single linked List
   
   ❌ Doubly Linked List
   
