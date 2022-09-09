@@ -118,14 +118,14 @@ class DoublyLinkedList {
     //return !!isFound;  
   }
 
-  // printList () {
-  //   if (this.length === 0 ) return undefined; 
-  //   let list = [];
-  //   let current = this.head; 
-  //   while (current) {
-  //     list.push(current.value)
-  //     current = current.next; 
-  //   }
-  //   return list; 
-  // }
+  printList () {
+    if (this.length === 0 ) return undefined; 
+    let list = [];
+    let current = this.head; 
+    while (current) {
+      list.push(current.value)
+      current = current.next; 
+    }
+    return list; 
+  }
 }
