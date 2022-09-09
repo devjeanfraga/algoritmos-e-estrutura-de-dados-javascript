@@ -109,14 +109,14 @@ class DoublyLinkedList {
     return current;
   }
 
-  // set (index, newValue ) {
-  //   let isFound  = this.get(index);
-  //   if (isFound) isFound.value = newValue;
-  //   return !!isFound;  
-  //   //let isFound  = this.get(index);
-  //   //isFound ? isFound.value = newValue : false;
-  //   //return !!isFound;  
-  // }
+  set (index, newValue ) {
+    let isFound  = this.get(index);
+    if (isFound) isFound.value = newValue;
+    return !!isFound;  
+    //let isFound  = this.get(index);
+    //isFound ? isFound.value = newValue : false;
+    //return !!isFound;  
+  }
 
   // printList () {
   //   if (this.length === 0 ) return undefined; 
