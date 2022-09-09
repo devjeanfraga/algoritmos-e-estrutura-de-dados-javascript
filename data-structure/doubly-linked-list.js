@@ -109,13 +109,35 @@ class DoublyLinkedList {
     return current;
   }
 
-  set (index, newValue ) {
+  set (index, value) {
     let isFound  = this.get(index);
-    if (isFound) isFound.value = newValue;
+    if (isFound) isFound.value = value;
     return !!isFound;  
     //let isFound  = this.get(index);
-    //isFound ? isFound.value = newValue : false;
+    //isFound ? isFound.value = value : false;
     //return !!isFound;  
+  }
+
+  insert (index, value) {
+    if ( index < 0 || index >= this.length) return false;
+    if (index === 0) return !!this.unshift(value);
+    if (index === this.length-1) return !!this.push(value);
+
+    let newNode = new Node(value);
+    let beforeNode = this.get(index-1);
+    let afterNode =  beforeNode.next;
+
+    beforeNode.next = newNode;
+    newNode.prev = beforeNode;
+    newNode.next = afterNode;
+    afterNode.prev = newNode; 
+
+    this.length++;
+    return true; 
+  }
+
+  remove (idnex) {
+
   }
 
   printList () {
