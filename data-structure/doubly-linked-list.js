@@ -87,27 +87,27 @@ class DoublyLinkedList {
     return this; 
   }
 
-  // get ( index ) {
-  //   if ( index < 0 || index >= this.length ) return null;
-  //   let middle = Math.floor(this.length/2); 
-  //   let current, counter;
-  //   if (index <= middle ) {
-  //     current = this.head;
-  //     counter = 0;
-  //     while (index !== counter) {
-  //       current = current.next;
-  //       counter++
-  //     }
-  // } else {
-  //   current = this.tail;
-  //   counter = this.length-1;
-  //     while (index !== counter ) {
-  //       current = current.prev;
-  //       counter--
-  //     }  
-  //   }
-  //   return current;
-  // }
+  get ( index ) {
+    if ( index < 0 || index >= this.length ) return null;
+    let middle = Math.floor(this.length/2); 
+    let current, counter;
+    if (index <= middle ) {
+      current = this.head;
+      counter = 0;
+      while (index !== counter) {
+        current = current.next;
+        counter++
+      }
+  } else {
+    current = this.tail;
+    counter = this.length-1;
+      while (index !== counter ) {
+        current = current.prev;
+        counter--
+      }  
+    }
+    return current;
+  }
 
   // set (index, newValue ) {
   //   let isFound  = this.get(index);
