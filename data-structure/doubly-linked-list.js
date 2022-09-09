@@ -43,34 +43,34 @@ class DoublyLinkedList {
     return poppedNode; 
   }
 
-  // /*
-  //   PSEUDOCODE
+  /*
+    PSEUDOCODE
 
-  //   -if length is 0 return undefined;
-  //   -store the curent head property in a variable (we can call old head)
-  //   - if the length is 1 
-  //     -set head to null 
-  //     -set the tail to null
-  //   - update de head to be the next of the old head
-  //   - set the head's prev property to be null
-  //   - set the old next head to be null
-  //   - decrement
-  //   -return hear
-  // */
-  // shift () {
-  //   if ( this.length === 0 ) return undefined;
-  //   let oldHead = this.head;
-  //   if (this.length === 1) {
-  //     this.head = null; 
-  //     this.tail = null; 
-  //   } else  {
-  //     this.head = oldHead.next;
-  //     this.head.prev = null;
-  //     oldHead.next = null; 
-  //   }
-  //   this.length--;
-  //   return oldHead; 
-  // }
+    -if length is 0 return undefined;
+    -store the curent head property in a variable (we can call old head)
+    - if the length is 1 
+      -set head to null 
+      -set the tail to null
+    - update de head to be the next of the old head
+    - set the head's prev property to be null
+    - set the old next head to be null
+    - decrement
+    -return hear
+  */
+  shift () {
+    if ( this.length === 0 ) return undefined;
+    let oldHead = this.head;
+    if (this.length === 1) {
+      this.head = null; 
+      this.tail = null; 
+    } else  {
+      this.head = oldHead.next;
+      this.head.prev = null;
+      oldHead.next = null; 
+    }
+    this.length--;
+    return oldHead; 
+  }
 
   // unshift (value) {
   //   let newNode =  new Node(value);
