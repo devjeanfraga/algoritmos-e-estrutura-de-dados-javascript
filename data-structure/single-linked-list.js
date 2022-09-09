@@ -132,6 +132,7 @@ class SinglyLinkedList  {
   };
 
   print () {
+    if (this.length === 0 ) return undefined;
     let arr = [];
     let current = this.head;
     while (current) {
