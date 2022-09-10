@@ -1,3 +1,8 @@
+/*
+  insertion-O(1)
+*/
+
+
 class Node {
   constructor (value) {
     this.value = value;
@@ -86,7 +91,7 @@ class DoublyLinkedList {
     this.length++;
     return this; 
   }
-
+  //O(n)
   get ( index ) {
     if ( index < 0 || index >= this.length ) return null;
     let middle = Math.floor(this.length/2); 
@@ -118,6 +123,7 @@ class DoublyLinkedList {
     //return !!isFound;  
   }
 
+  //O(1)
   insert (index, value) {
     if ( index < 0 || index >= this.length) return false;
     if (index === 0) return !!this.unshift(value);
@@ -135,9 +141,24 @@ class DoublyLinkedList {
     this.length++;
     return true; 
   }
+  //O(1)
+  remove (index) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === 0 ) return !!this.shift();
+    if (index === this.length-1) return !!this.pop();
 
-  remove (idnex) {
+    let removedNode = this.get(index);
+    let beforeNode = removedNode.prev;
+    let afterNode = removedNode.next;
 
+    beforeNode.next = afterNode;
+    afterNode.prev = beforeNode;
+
+    removedNode.prev = null;
+    removedNode.next = null; 
+    this.length--
+
+    return removedNode;
   }
 
   printList () {
