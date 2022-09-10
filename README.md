@@ -38,7 +38,7 @@
 
   ✅ Single linked List
   
-  ❌ Doubly Linked List
+  ✅ Doubly Linked List
   
   ❌ Stacks 
   
