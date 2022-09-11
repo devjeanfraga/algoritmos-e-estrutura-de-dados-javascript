@@ -40,7 +40,7 @@
   
   ✅ Doubly Linked List
   
-  ❌ Stacks 
+  ✅ Stacks 
   
   ❌ Queues
   
