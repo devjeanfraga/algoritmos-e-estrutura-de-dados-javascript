@@ -3,6 +3,18 @@
   É um conceito de estrutura de dados 
   onde o ultimo a entrar é o primeiro a sair. 
   É o conceito usado na recursão, por exemplo. 
+
+  Big O Notation 
+
+  Essa estrutura prioriza a inserção e a remoçào de elementos 
+  Logo temos uma complexidade de O(1) em ambas operações. 
+  Para acessar ou buscar um elemento especifico teremos um O(n).
+
+  Pra que server ? 
+
+  -pode ser usada para chamada de funções. 
+  -operações de fazer e desfazer.
+  -para redirecionar(routing) o histórico da página onde vc esteve; 
 */
 
 class Node {
