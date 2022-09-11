@@ -61,6 +61,7 @@ class DoublyLinkedList {
     - set the old next head to be null
     - decrement
     -return hear
+
   */
   shift () {
     if ( this.length === 0 ) return undefined;

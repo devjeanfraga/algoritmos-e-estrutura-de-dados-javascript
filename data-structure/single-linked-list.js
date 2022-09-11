@@ -13,7 +13,7 @@ class SinglyLinkedList  {
     this.tail = null;
     this.length = 0;
   };
-  
+  // adiciona no final da lista 
   push (value) {
     const newNode = new Node(value);
     if (!this.head) {
@@ -25,7 +25,7 @@ class SinglyLinkedList  {
     };
   };
   
-
+  // remove do final da lista
   pop () {
     if(!this.head) return undefined; 
     let current = this.head;
@@ -46,7 +46,7 @@ class SinglyLinkedList  {
     return current; 
   };
 
-
+  // remove do inicio da lista
   shift () {
     if (!this.head) return undefined;
     let currentHead = this.head;
@@ -56,7 +56,7 @@ class SinglyLinkedList  {
     return currentHead.value;
   };
   
-
+  // adiciona no inico da lista
   unshift (value) {
     let newNode = new Node(value);
     if (!this.head) {
@@ -69,7 +69,7 @@ class SinglyLinkedList  {
     this.length++;
     return this;
   };
-
+  
   get (index) {
     if (index < 0 || index >= this.length ) return null; 
     let current =  this.head;
