@@ -42,7 +42,7 @@
   
   ✅ Stacks 
   
-  ❌ Queues
+  ✅ Queues
   
   ❌ Bynary Search Trees
   
