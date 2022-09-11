@@ -26,11 +26,10 @@ class Stack {
     preciso reindexar toda a lista devida sua estrutura ser linkada e não
     indexada como nos arrays tradicionais. caso contrário o unshift e o shift 
     teriam uma complexidade maior. 
-
   */
     push (val) {
       let newNode = new Node (val);
-      if (!this.head) {
+      if (!this.first) {
         this.first = newNode;
         this.last = newNode;
       } else {
@@ -40,5 +39,19 @@ class Stack {
         temp.prev = newNode;
       }
       return ++this.length;
+    }
+
+    pop () {
+      if (this.length === 0 ) return null; 
+      let popped = this.first;
+      if (this.first === this.last) {
+        this.last = null; 
+      } 
+      this.first = popped.next; 
+      this.first.prev = null; 
+      //popped.next =  null;
+      this.length--
+      //return popped.val;
+      return popped.val;
     }
 }
