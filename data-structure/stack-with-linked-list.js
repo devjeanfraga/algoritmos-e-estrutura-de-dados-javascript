@@ -28,5 +28,17 @@ class Stack {
     teriam uma complexidade maior. 
 
   */
-
+    push (val) {
+      let newNode = new Node (val);
+      if (!this.head) {
+        this.first = newNode;
+        this.last = newNode;
+      } else {
+        let temp = this.first; 
+        this.first = newNode
+        this.first.next = temp;
+        temp.prev = newNode;
+      }
+      return ++this.length;
+    }
 }
