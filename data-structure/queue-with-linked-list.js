@@ -21,13 +21,13 @@ class Queue {
     }
     return ++this.size;
   }
-  // dequeue () {
-  //   if (!this.first) return null; 
-  //   let temp = this.first; 
-  //   if (this.first === this.last) {
-  //     this.last = null;
-  //   } 
-  //   this.first = temp.next;
-  //   return --this.size; 
-  // }
+  dequeue () {
+    if (!this.first) return null; 
+    let temp = this.first; 
+    if (this.first === this.last) {
+      this.last = null;
+    } 
+    this.first = temp.next;
+    return --this.size; 
+  }
 }
