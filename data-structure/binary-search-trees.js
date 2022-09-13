@@ -39,4 +39,33 @@ class BinarySearchTree {
       };
     };
   };
+
+  insertRecursive ( value ) {
+    const newNode = new Node(value);
+
+    // Base Case
+    if (!this.root) {
+      this.root = newNode;
+      return this;
+    }
+
+    const inserted = (value, current = this.root) => {
+      if(value === current.value) return undefined;
+      if (value < current.value) {
+        if (!current.left) {
+          current.left = newNode;
+          return this;
+        }
+        return inserted(value, current.left)
+      } else {
+        if (!current.right) {
+          current.right = newNode;
+          return this;
+        }
+        return inserted(value, current.right)
+      }
+    }
+
+    return inserted(value);
+  }
 }
