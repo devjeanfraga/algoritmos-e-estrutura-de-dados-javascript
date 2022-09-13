@@ -68,4 +68,22 @@ class BinarySearchTree {
 
     return inserted(value);
   }
+
+  findWithRecursion (value, node =  this.root) {
+    if (!node) return undefined; 
+    if (node.value === value ) return node; 
+    if (value < node ) return this.find(value, node.left)
+    else return this.find(value, node.rigth)
+  }; 
+
+  findWithHelperRecursion (value) {
+    const helper = (node = this.root) => {
+      if (!node) return false; 
+      if (node === value ) return node;
+      if ( value < node) return helper( node.left );
+      else return helper(node.right); 
+    }
+
+    return helper(); 
+  } 
 }
