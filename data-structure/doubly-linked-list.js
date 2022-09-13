@@ -115,6 +115,23 @@ class DoublyLinkedList {
     return current;
   }
 
+  getWithRecursion (index) {
+    if ( index < 0 || index >= this.length ) return null;
+    let middle = Math.floor(this.length/2); 
+       
+    const helper = (current = this.head, counter = 0) => {
+      if (index === counter) return current;
+      if (index <= middle)  {
+        return helper( current.next, counter+1)
+      } else {
+        current = this.tail, counter = this.length-1;
+        if (index === counter) return current;
+        else return helper(current.prev, counter-1)
+      }
+    };
+    return helper(); 
+  }
+
   set (index, value) {
     let isFound  = this.get(index);
     if (isFound) isFound.value = value;
