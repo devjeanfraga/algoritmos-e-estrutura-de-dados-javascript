@@ -44,7 +44,7 @@
   
   ✅ Queues
   
-  ❌ Bynary Search Trees
+  ✅ Bynary Search Trees
   
   ❌ Tree Traversal
   
