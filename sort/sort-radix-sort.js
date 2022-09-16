@@ -1,13 +1,21 @@
+const getDigit  = (num, i) => Math.floor(Math.abs(num) / Math.pow(10, i)) % 10
+console.log(getDigit(12345, 0))
 /*
   Pegar o digito | GetDigit
+  número dividito por 10 elevado a potencia do indice módulo de 10 
   getDigit(12345, 0) //5
   getDigit(12345, 1) //4
   getDigit(12345, 2) //3
 */
-const getDigit  = (num, i) => Math.floor(Math.abs(num) / Math.pow(10, i)) % 10
-console.log(getDigit(12345, 0))
+
+
+const getNumSize = (num) => {
+  if (num  === 0 ) return 1
+  return Math.floor(Math.log10(Math.abs(num))) + 1; 
+}
 /*
   MATH.LOG10() 
+  log de 10 do número + 1; 
   retorna o logaritmo de base 10 de um dado número 
   se o número for = 0 o valor retornado será -infinity
   se o número for menor que zero retorna NaN 
@@ -24,14 +32,8 @@ console.log(getDigit(12345, 0))
   getnumSize(3647590)  //7
   
 */
-const getNumSize = (num) => {
-  if (num  === 0 ) return 1
-  return Math.floor(Math.log10(Math.abs(num))) + 1; 
-}
 
-/*
-  PEGAR O TAMANHO DO MAIOR NÚMERO 
-*/
+
 
 const getMostNumber =  (arr) => {
   let maxSize = 0;
@@ -41,7 +43,9 @@ const getMostNumber =  (arr) => {
   }
   return maxSize;
 }
-
+/*
+  PEGAR O TAMANHO DO MAIOR NÚMERO 
+*/
 
 
 function radixSort (arr) {
