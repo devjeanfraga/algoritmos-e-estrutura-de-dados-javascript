@@ -31,11 +31,11 @@ function superDigit(n, k) {
   }
 
   if (!k ) {
-      n.length > 20 ? n = sumToLongN(n) : n = sum(n);
+      n.length > 9 ? n = sumToLongN(n) : n = sum(n);
       n = n.toString();    
   } 
   else {
-      n.length > 20 ? n = sumToLongN(n) : n = sum(n) * k;
+      n.length > 9 ? n = sumToLongN(n) : n = sum(n) * k;
       n = n.toString();
   }
   return superDigit(n);
