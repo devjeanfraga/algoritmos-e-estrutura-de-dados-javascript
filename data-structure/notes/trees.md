@@ -20,5 +20,45 @@
   # Big O notation 
   - Searching O(log n )
   - Insertion O(log n )
+  #### But Not Guaranteed !  
 
-  ### But Not Guaranteed !  
+
+
+
+  ## Breath First Search 
+  usada em arvores mais largas que profundas 
+      ->  10
+    ->  6    15
+  ->  3  8     20
+
+  [10,6,15,3,8,20] 
+
+
+  ## Depth First Pre Order Solution
+  usada em arvores de pesquisa binária para clonar ou copiar a estrutura da árvore
+           ↓
+       ↓   10  ↓
+    ↓  6  ↓    15 ↓
+    3     8       20
+
+  [10,6,3,8,15,20]    
+
+  ## Depth First Post Order Solution
+
+           10  
+       6   ↑  15 
+    3  ↑  8   ↑   20
+    ↑     ↑       ↑
+
+  [3,8,6,20,15,10] 
+
+## Depth First In Order Solution
+  usada em arvores de pesquisa binária para recuperar os dados em ordem crescente. 
+
+          10  
+      6   ↑  15 
+   3  ↑  8   ↑   20
+   ↑     ↑       ↑
+
+[3,6,8,10,15,20]    
+
