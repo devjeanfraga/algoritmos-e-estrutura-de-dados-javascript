@@ -62,3 +62,18 @@
 
 [3,6,8,10,15,20]    
 
+
+## Binary Heaps 
+##### Diferenças 
+  - Binary trees, árvores que possuem apenas dois filhos; 
+  - Binary Search Trees arvores que possuem dois filhos sendo o da esquerda o menor e os da direita o maior;
+  - Binary Heaps, arvores  onde os nós pais possuem dois filhos: 
+    - Max: Sendo o pai sempre o maior. 
+    - Min: Sendo o pai sempre o menor. 
+  **Observação**: Antes de ir pro filho da direita o da esquerda deve ser preenchido e vice versa. 
+  
+**Exemplo: Max Binary Heap**
+       40
+    39    35
+  38 31 24 30
+19 32 
