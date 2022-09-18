@@ -58,7 +58,7 @@ function mergeSort (arr) {
   let left =  mergeSort( arr.slice(0,middle) );
   let right = mergeSort( arr.slice(middle) );
   const res = merge(left, right)
-  console.log(res)
+  //console.log(res)
   return res 
 }
 
