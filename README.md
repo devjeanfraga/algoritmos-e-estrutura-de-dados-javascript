@@ -46,7 +46,7 @@
   
   ✅ Bynary Search Trees
   
-  ❌ Tree Traversal
+  ✅ Tree Traversal
   
   ❌ Bynary Heaps
   
