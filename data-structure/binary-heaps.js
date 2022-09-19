@@ -26,6 +26,50 @@ class MaxBinaryHeaps {
       index = parentIdx;
     }
   }
+
+  extractMax () {
+    let max = this.values[0];
+    let end = this.values.pop();
+    if (this.values.length > 0 ) {
+      this.values[0] = end;
+      this.sinkDown();
+    }
+    return max;
+}
+
+sinkDown () {
+
+const helper = (i=0, el, isSwap = true) => {
+    if(!isSwap) return;
+    el = this.values[i];
+    let leftIdx = Math.floor(i*2+1); 
+    let rightIdx = Math.floor(i*2+2);
+    let leftChild = this.values[leftIdx];
+    let rightChild = this.values[rightIdx];
+    
+    if (leftChild > rightChild) {
+      if (el < leftChild ) {
+        isSwap = this.swap(this.values, i,leftIdx) ; 
+        i = leftIdx;
+      } else {
+          isSwap = false
+      } 
+    } else {
+      if (el < rightChild ) {
+        isSwap = this.swap(this.values, i,rightIdx) ;
+        i = rightIdx;
+      } else {
+          isSwap = false
+      }
+    }
+    el = this.values[i]
+
+    return helper(i,el, isSwap) ;
+    
+   
+}
+return helper()
+}
 }
 
 //       40
@@ -36,4 +80,4 @@ class MaxBinaryHeaps {
 // [40,39,35,38,31,24,30,19,32]
 let heaps = new MaxBinaryHeaps()
 
-heaps.insert(39);
+heaps.extractMax();
