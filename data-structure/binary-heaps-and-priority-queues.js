@@ -96,34 +96,34 @@ class PriorityQueue {
     this.values = [];
   }
 
-  // swap(arr, idx1, idx2 ) {
-  //   let temp = arr[idx1];
-  //   arr[idx1] = arr[idx2];
-  //   arr[idx2] = temp; 
-  // }
-  // enqueue(value, priority) {
-  //   let newNode = new Node(value, priority);
-  //   this.values.push(newNode);
-  //   if(this.values.length > 1) this.bubbleUp();
-  //   console.log(this.values);
-  //   return this; 
-  // }
-  // bubbleUp () {
-  //   let i = this.values.length-1, el;
+  swap(arr, idx1, idx2 ) {
+    let temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp; 
+  }
+  enqueue(value, priority) {
+    let newNode = new Node(value, priority);
+    this.values.push(newNode);
+    if(this.values.length > 1) this.bubbleUp();
+    console.log(this.values);
+    return this; 
+  }
+  bubbleUp () {
+    let i = this.values.length-1, el;
 
-  //   const helper =  (index = i) => {
-  //     if (index > 0 ) el = this.values[index];
-  //     else return;
+    const helper =  (index = i) => {
+      if (index > 0 ) el = this.values[index];
+      else return;
 
-  //     let parentIndex = Math.floor(index-1/2), parent = this.values[parentIndex]; 
+      let parentIndex = Math.floor(index-1/2), parent = this.values[parentIndex]; 
 
-  //     if (el.priority < parent.priority) (this.swap(this.values, index, parentIndex), index = parentIndex);
-  //     else  return;
+      if (el.priority < parent.priority) (this.swap(this.values, index, parentIndex), index = parentIndex);
+      else  return;
 
-  //     helper(index); 
-  //   };
-  //   helper(); 
-  // }
+      helper(index); 
+    };
+    helper(); 
+  }
   // dequeue() {
   //   let priority = this.values[0];
   //   let end = this.values.pop();
