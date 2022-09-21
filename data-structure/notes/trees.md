@@ -77,3 +77,11 @@
     39    35
   38 31 24 30
 19 32 
+
+## Priority Queues
+  Geralmente implementada com Binary Heaps usando a propriedade priority; 
+  *focada em insert e extract*
+#### Big  O notation 
+  insert  **O(logN)**
+  extract **O(logN)**
+  search  **O(N)**
