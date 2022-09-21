@@ -48,9 +48,9 @@
   
   ✅ Tree Traversal
   
-  ❌ Bynary Heaps
+  ✅ Bynary Heaps
 
-  ❌ Priority Queues
+  ✅ Priority Queues
   
   ❌ Hash Tables
   
