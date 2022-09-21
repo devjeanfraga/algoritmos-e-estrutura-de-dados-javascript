@@ -124,39 +124,39 @@ class PriorityQueue {
     };
     helper(); 
   }
-  // dequeue() {
-  //   let priority = this.values[0];
-  //   let end = this.values.pop();
-  //   if(this.values.length > 0) {
-  //     this.values[0] = end; 
-  //     this.sinkDown();
-  //   }
-  //   return priority; 
-  // }
-  // sinkDown() {
-  //   let i = 0; 
-  //   const helper = (isSwap = true) => {
-  //     if(!isSwap) return; 
-  //     let elPriority =  this.values[i].priority;
-  //     let leftIdx = Math.floor(i*2+1), 
-  //         rightIdx = Math.floor(i*2+2);
-  //     let leftPriority = this.values[leftIdx]?.priority, 
-  //         rightPriority = this.values[rightIdx]?.priority;
+  dequeue() {
+    let priority = this.values[0];
+    let end = this.values.pop();
+    if(this.values.length > 0) {
+      this.values[0] = end; 
+      this.sinkDown();
+    }
+    return priority; 
+  }
+  sinkDown() {
+    let i = 0; 
+    const helper = (isSwap = true) => {
+      if(!isSwap) return; 
+      let elPriority =  this.values[i].priority;
+      let leftIdx = Math.floor(i*2+1), 
+          rightIdx = Math.floor(i*2+2);
+      let leftPriority = this.values[leftIdx]?.priority, 
+          rightPriority = this.values[rightIdx]?.priority;
 
-  //     if (elPriority > leftPriority || elPriority > rightPriority ) {
-  //       if (leftPriority === rightPriority) {
-  //         this.swap(this.values, i, rightIdx) 
-  //         i = rightIdx
-  //       } else leftPriority > rightPriority || +Infinity 
-  //         ? (this.swap(this.values, i, leftIdx), i = leftIdx) 
-  //         : (this.swap(this.values, i, rightIdx), i = rightIdx)
-  //     } else {
-  //       isSwap = false;
-  //     }
-  //     helper(isSwap); 
-  //   }
-  //   helper(); 
-  // }
+      if (elPriority > leftPriority || elPriority > rightPriority ) {
+        if (leftPriority === rightPriority) {
+          this.swap(this.values, i, rightIdx) 
+          i = rightIdx
+        } else leftPriority > rightPriority || +Infinity 
+          ? (this.swap(this.values, i, leftIdx), i = leftIdx) 
+          : (this.swap(this.values, i, rightIdx), i = rightIdx)
+      } else {
+        isSwap = false;
+      }
+      helper(isSwap); 
+    }
+    helper(); 
+  }
 }
 
 const priorityQueue = new PriorityQueue()
