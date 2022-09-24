@@ -52,7 +52,7 @@
 
   ✅ Priority Queues
   
-  ❌ Hash Tables
+  ✅ Hash Tables
   
   ❌ Graphs
   
