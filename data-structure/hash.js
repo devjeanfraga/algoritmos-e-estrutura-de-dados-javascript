@@ -12,12 +12,19 @@ class HashTable {
       let value = char.charCodeAt(0) - 96; 
       total =  (total * wierd_prime + value) % this.keyMap.length; 
     }
-    return total; 
+    return Math.abs(total); 
   }
 
   // _division_hash (key) {
   //   let total = 0;
 
   // }
+  set (key, value) {
+    let index = this._hash(key);
+    if(!this.keyMap[index]) {
+      this.keyMap[index] = [];
+      this.keyMap[index].push(key,value);
+    } else return "colision"
+  }
 }
 
