@@ -15,10 +15,6 @@ class HashTable {
     return Math.abs(total); 
   }
 
-  // _division_hash (key) {
-  //   let total = 0;
-
-  // }
   set (key, value) {
     let index = this._hash(key);
     if(!this.keyMap[index]) this.keyMap[index] = [];
