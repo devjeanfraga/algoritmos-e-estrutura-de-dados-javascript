@@ -21,10 +21,17 @@ class HashTable {
   // }
   set (key, value) {
     let index = this._hash(key);
-    if(!this.keyMap[index]) {
-      this.keyMap[index] = [];
-      this.keyMap[index].push(key,value);
-    } else return "colision"
+    if(!this.keyMap[index]) this.keyMap[index] = [];
+    this.keyMap[index].push([key,value]);
+  }
+
+  get (key) {
+    let index = this._hash(key);
+    let box = this.keyMap[index]
+    for (let i = 0; i < this.keyMap.length; i++)  {
+      if (box[i][0] === key) return box[i][1]
+    }
+    return undefined;
   }
 }
 
