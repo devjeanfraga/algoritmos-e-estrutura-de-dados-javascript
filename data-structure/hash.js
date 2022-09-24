@@ -33,5 +33,24 @@ class HashTable {
     }
     return undefined;
   }
+
+  getKeys (arr = this.keyMap) {
+    let keys = [];
+    for (let i = 0 ; i < arr.length ; i++) {
+      if (Array.isArray(arr[i])) keys = keys.concat(this.getKeys(arr[i]));
+      else if (arr[i] && i === 0 ) keys.push(arr[i]);
+    }
+    return keys;
+  }
+
+  getValues (arr = this.keyMap) {
+    let values = [];
+    for (let i = 0 ; i < arr.length ; i++) {
+      if (Array.isArray(arr[i])) values = values.concat(this.getValues(arr[i]));
+      else if (arr[i] && i === 1 ) values.push(arr[i]);
+    }
+    return values;
+  }
+
 }
 
