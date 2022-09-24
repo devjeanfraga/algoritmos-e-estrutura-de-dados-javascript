@@ -54,3 +54,19 @@ class HashTable {
 
 }
 
+/*
+As tabelas de hash são coleções de pares de valores-chave
+
+As tabelas de hash podem encontrar valores rapidamente com uma chave
+
+As tabelas de hash podem adicionar novos valores-chave rapidamente
+
+As tabelas de hash armazenam dados em uma grande matriz e funcionam com hash das chaves
+
+Um bom hash deve ser rápido, distribuir as chaves uniformemente e ser determinístico
+
+O encadeamento separado e a sondagem linear são duas estratégias usadas para lidar com duas chaves com hash para o mesmo índice
+
+Na dúvida, use uma tabela de hash!
+
+*/
