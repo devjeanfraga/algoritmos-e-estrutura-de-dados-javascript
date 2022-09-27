@@ -1,3 +1,54 @@
+class Node {
+  constructor (val) {
+    this.val = val; 
+    this.next =  null;
+  }
+}
+
+class Queue {
+  constructor () {
+    this.first = null;
+    this.last = null; 
+    this.size = 0; 
+  }
+
+  enqueue (val) {
+    let newNode = new Node(val); 
+    if (this.size === 0 )  {
+      this.first = newNode;
+      this.last = newNode;
+    }
+    else {
+      this.last.next = newNode;
+      this.last = newNode;
+    }
+    return ++this.size; 
+  }
+
+  dequeue () {
+    if (!this.first) return null; 
+    let removed = this.first;
+    if (this.first === this.last) {
+      this.first = null; 
+      this.last = null;
+    } 
+    else this.first = removed.next;
+    --this.size; 
+    return removed.val; 
+  }
+
+  printQueue () {
+    let result = []; 
+    (function helper (source) {
+      if (!source) return null;
+      result.push(source.val); 
+      helper(source.next); 
+    })(this.first);
+    return result; 
+  }
+}
+
+
 /*
 Vertex - a node
 Edge - connection between nodes
@@ -9,6 +60,7 @@ Directed/Undirected - directions assigned to distanced between vertices | direç
 
 
 // Esse grafo possui edges bidirecionais
+
 class GraphAdjacencyList {
   constructor () {
     this.adjacencyList = {};
@@ -110,6 +162,31 @@ class GraphAdjacencyList {
     return result;    
   }
 
+  breadthFirstSearch (source) {
+    if(!source) return null; 
+    let queue = new Queue(); 
+    let result = [];
+    let isVisited =  {};
+    let currentVertex; 
+
+    isVisited[source] = true; 
+    queue.enqueue(source); 
+
+    while (queue.size > 0 ) {
+      currentVertex =  queue.dequeue();
+      result.push(currentVertex);
+
+    //this.adjacencyList[currentVertex].slice().reverse().map( START IN THE RIGHT..
+      this.adjacencyList[currentVertex].map(neighbor => { // START IN THE LEFT
+        if (!isVisited[neighbor]) {
+          isVisited[neighbor] = true; 
+          queue.enqueue(neighbor); 
+        };
+      });
+    };
+    return result; 
+  }
+
  }
 
 
@@ -129,6 +206,15 @@ g.addEdge("D","E")
 g.addEdge("D","F")
 g.addEdge("E","F")
 
+//      A
+//   /     \
+//  B       C
+//   \     /
+//    D---E
+//     \ /
+//      F
+
 g.depthFirstSearchRecursive("A") // start 0; RESULT: ['A', 'B', 'D', 'E', 'C', 'F']
 g.depthFirstSearchIterative("A") // start -1 RESULT: ['A', 'C', 'E', 'F', 'D', 'B']
 g.depthFirstSearchIterative2("A") // start 0 RESULT: ['A', 'B', 'D', 'E', 'F', 'C']
+g.breadthFirstSearch("A"); // ['A', 'B', 'C', 'D', 'E', 'F']
