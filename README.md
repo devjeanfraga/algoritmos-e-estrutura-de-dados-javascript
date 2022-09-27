@@ -54,9 +54,9 @@
   
   ✅ Hash Tables
   
-  ❌ Graphs
+  ✅ Graphs
   
-  ❌ Graphs Traversal
+  ✅ Graphs Traversal
   
   ❌ Dijkstra's Algorithm
   
