@@ -105,7 +105,7 @@ class PriorityQueue {
     let newNode = new Node(value, priority);
     this.values.push(newNode);
     if(this.values.length > 1) this.bubbleUp();
-    console.log(this.values);
+    //console.log(this.values);
     return this; 
   }
   bubbleUp () {
@@ -147,7 +147,7 @@ class PriorityQueue {
         if (leftPriority === rightPriority) {
           this.swap(this.values, i, rightIdx) 
           i = rightIdx
-        } else leftPriority > rightPriority || +Infinity 
+        } else leftPriority < (rightPriority || +Infinity)
           ? (this.swap(this.values, i, leftIdx), i = leftIdx) 
           : (this.swap(this.values, i, rightIdx), i = rightIdx)
       } else {
