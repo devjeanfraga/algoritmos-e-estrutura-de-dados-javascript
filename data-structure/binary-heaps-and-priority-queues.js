@@ -144,10 +144,7 @@ class PriorityQueue {
           rightPriority = this.values[rightIdx]?.priority;
 
       if (elPriority > leftPriority || elPriority > rightPriority ) {
-        if (leftPriority === rightPriority) {
-          this.swap(this.values, i, rightIdx) 
-          i = rightIdx
-        } else leftPriority < (rightPriority || +Infinity)
+        leftPriority < (rightPriority || +Infinity)
           ? (this.swap(this.values, i, leftIdx), i = leftIdx) 
           : (this.swap(this.values, i, rightIdx), i = rightIdx)
       } else {
@@ -172,3 +169,30 @@ console.log(priorityQueue.values)
 
 
 
+/*
+  sinkDown() {
+    let i = 0; 
+    const helper = (isSwap = true) => {
+      if(!isSwap) return; 
+      let elPriority =  this.values[i].priority;
+      let leftIdx = Math.floor(i*2+1), 
+          rightIdx = Math.floor(i*2+2);
+      let leftPriority = this.values[leftIdx]?.priority, 
+          rightPriority = this.values[rightIdx]?.priority;
+
+      if (elPriority > leftPriority || elPriority > rightPriority ) {
+        if (leftPriority === rightPriority) {
+          this.swap(this.values, i, rightIdx) 
+          i = rightIdx
+        } else leftPriority < (rightPriority || +Infinity)
+          ? (this.swap(this.values, i, leftIdx), i = leftIdx) 
+          : (this.swap(this.values, i, rightIdx), i = rightIdx)
+      } else {
+        isSwap = false;
+      }
+      helper(isSwap); 
+    }
+    helper(); 
+  }
+
+*/
