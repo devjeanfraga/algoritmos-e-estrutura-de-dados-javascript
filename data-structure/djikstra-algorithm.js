@@ -71,3 +71,20 @@ class PriorityQueue {
     helper();
   }
 }
+
+class WeightedGraph {
+  constructor () {
+    this.adjacencyList = {}
+  }
+
+  addVertex(vertex) {
+    if(!this.adjacencyList[vertex]) this.adjacencyList[vertex] = []
+  }
+
+  addEdge(start, finish, weight) {
+    this.adjacencyList[start].push({node: finish, weight });
+    this.adjacencyList[finish].push({node: start, weight });
+  }
+
+  
+}
