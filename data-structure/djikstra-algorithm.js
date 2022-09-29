@@ -40,4 +40,34 @@ class PriorityQueue {
     }
     helper()
   }
+
+  dequeue () {
+    let priority = this.values[0];
+    let end = this.values.pop(); 
+    if (this.values.length > 0) {
+      this.values[0] = end; 
+      this.sinkDown()
+    }
+    return priority; 
+  }
+
+  sinkDown () {
+    let i = 0;
+    const helper = (isSwap = true) => {
+      if (!isSwap) return;
+      let currentPriority =  this.values[i]?.priority; 
+      let leftIndex =  Math.floor(i*2+1), 
+      leftPriority =  this.values[leftIndex]?.priority;
+      let rightIndex =  Math.floor(i*2+2),
+      rightPriority =  this.values[rightIndex]?.priority;
+
+      if(currentPriority > leftPriority || currentPriority > rightPriority) {
+        leftPriority <= (rightPriority || +Infinity) 
+          ? (this.swap(this.values, i, leftIndex), i = leftIndex)
+          : (this.swap(this.values, i, rightIndex), i = rightIndex)
+      } else isSwap =  false; 
+      helper(isSwap);
+    }
+    helper();
+  }
 }
