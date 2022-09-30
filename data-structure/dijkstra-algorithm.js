@@ -86,5 +86,51 @@ class WeightedGraph {
     this.adjacencyList[finish].push({node: start, weight });
   }
 
-  
+  Dijkstra(start, end) {
+    let nodes = new PriorityQueue(); 
+    let distances = {};
+    let previous = {}; 
+    let priority, path = []; 
+
+    //INITIAL STATE
+    for (let vtex in this.adjacencyList) {
+      if (vtex === start ) (distances[vtex] = 0, nodes.enqueue(vtex, 0));
+      else (distances[vtex] = Infinity, nodes.enqueue(vtex, Infinity));
+      previous[vtex] = null; 
+    }
+
+    while (nodes.values.length) {
+      priority = nodes.dequeue().value;
+      if (priority === end ) {
+
+      }
+
+      if (distances[priority] !== Infinity) {
+        for ( let i in this.adjacencyList[priority] ) {
+          let elOfPriority = this.adjacencyList[priority][i];
+          console.log(i)
+          console.log(elOfPriority)
+
+        }
+      } 
+    }
+  }
 }
+
+const graph = new WeightedGraph()
+graph.addVertex("A")
+graph.addVertex("B")
+graph.addVertex("C")
+graph.addVertex("D")
+graph.addVertex("E")
+graph.addVertex("F")
+
+graph.addEdge("A","B",4)
+graph.addEdge("A","C",2)
+graph.addEdge("B","E",3)
+graph.addEdge("C","D",2)
+graph.addEdge("C","F",4)
+graph.addEdge("D","E",3)
+graph.addEdge("D","F",1)
+graph.addEdge("E","F",1)
+graph.Dijkstra("A","E")
