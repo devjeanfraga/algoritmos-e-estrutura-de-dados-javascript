@@ -58,7 +58,7 @@
   
   ✅ Graphs Traversal
   
-  ❌ Dijkstra's Algorithm
+  ✅ Dijkstra's Algorithm
   
   ❌ Dynamic Programming
   
