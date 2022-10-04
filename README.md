@@ -60,6 +60,6 @@
   
   ✅ Dijkstra's Algorithm
   
-  ❌ Dynamic Programming
+  ✅ Dynamic Programming
   
   
