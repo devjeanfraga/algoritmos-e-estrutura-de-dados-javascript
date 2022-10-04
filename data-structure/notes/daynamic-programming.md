@@ -38,6 +38,14 @@ OBS: Esse método funciona apenas com problemas que tenham sobreposição de sub
 ![substructure optimal example](https://github.com/JeanFragaJS/algoritmos-e-estrutura-de-dados-javascript/blob/master/assets/img-4.png?raw=true)
 ![no substructure optimal example](https://github.com/JeanFragaJS/algoritmos-e-estrutura-de-dados-javascript/blob/master/assets/img-5.png?raw=true)
 
+## The problem of Recursive Fibonacci Solution 
+ -  O problema é que essa solução repete várias das mesmas coisas muitas vezes. 
+ #### Por exemplo para obtermos fibonacci de 7 repetimos várias vezes fibonacci de 5, 4, 3 e ao limite de 2. Isso torna as coisas realmente muito lentas. 
+ 
+  
+
+
+
 ## Solution: Memoization!! 
 - Armazenar os resultados de chamadas de função e retornar o resultado armazenado em cache quando as mesmas entradas ocorrerem novamente. 
 
