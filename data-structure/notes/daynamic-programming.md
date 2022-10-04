@@ -43,7 +43,9 @@ OBS: Esse método funciona apenas com problemas que tenham sobreposição de sub
  #### Por exemplo para obtermos fibonacci de 7 repetimos várias vezes fibonacci de 5, 4, 3 e ao limite de 2. Isso torna as coisas realmente muito lentas. 
  
   ![fib](https://github.com/JeanFragaJS/algoritmos-e-estrutura-de-dados-javascript/blob/master/assets/img-6.png?raw=true)
-
+  
+#### Gera custo computacional elevado em complexidade de tempo.  
+  ![Big-O](https://github.com/JeanFragaJS/algoritmos-e-estrutura-de-dados-javascript/blob/master/assets/img-7.png?raw=true)
 
 
 
