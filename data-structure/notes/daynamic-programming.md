@@ -26,15 +26,17 @@ OBS: Esse método funciona apenas com problemas que tenham sobreposição de sub
 - 1 + 2 = 3 
 - 2 + 3 = 5 ...
 
-//images
-
+![overlapping example](https://github.com/JeanFragaJS/algoritmos-e-estrutura-de-dados-javascript/blob/master/assets/img-1.png?raw=true)
+![no everlapping example](https://github.com/JeanFragaJS/algoritmos-e-estrutura-de-dados-javascript/blob/master/assets/img-2.png?raw=true)
+![special case example](https://github.com/JeanFragaJS/algoritmos-e-estrutura-de-dados-javascript/blob/master/assets/img-3.png?raw=true)
 
 ## O que é uma subestrutura otimizada
 
 - Diz-se que um problema tem subestrutura otimizada se uma ótima solução pode ser construída a partir de soluções otimizadas de seus subproblemas.
 - A problem is said to have optimal substructure if an optimal can be constructed from optimal solutions of its subproblems. 
 
-// images 
+![substructure optimal example](https://github.com/JeanFragaJS/algoritmos-e-estrutura-de-dados-javascript/blob/master/assets/img-4.png?raw=true)
+![no substructure optimal example](https://github.com/JeanFragaJS/algoritmos-e-estrutura-de-dados-javascript/blob/master/assets/img-5.png?raw=true)
 
 ## Solution: Memoization!! 
 - Armazenar os resultados de chamadas de função e retornar o resultado armazenado em cache quando as mesmas entradas ocorrerem novamente. 
