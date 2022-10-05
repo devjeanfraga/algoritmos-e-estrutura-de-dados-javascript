@@ -23,6 +23,8 @@ class SinglyLinkedList  {
       this.tail.next = newNode;
       this.tail = newNode;
     };
+    ++this.length;
+    return this;
   };
   
   // remove do final da lista
