@@ -14,13 +14,17 @@ class GraphAdjacencyMatrix {
   }
 
   addEdge (vtex1, vtex2) {
-    
+    let idx1 = this.vtexIndex[vtex1], idx2 = this.vtexIndex[vtex2];
+    this.adjacencyMatrix[idx1][idx2] = 1;
+    this.adjacencyMatrix[idx2][idx1] = 1;
+    return { matrix:this.adjacencyMatrix, index: this.vtexIndex}
   }
 }
 
 const graph =  new GraphAdjacencyMatrix();
 console.log(graph.addVertex("A"));
 console.log(graph.addVertex("B"));
+console.log(graph.addEdge("A","B"));
 
 
 
