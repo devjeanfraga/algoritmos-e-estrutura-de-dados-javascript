@@ -42,7 +42,7 @@ function bubbleSort (arr) {
   let isSwap
   for (let i = arr.length; i > 0; i--) {
     isSwap = false;
-    for (let j = 0; j < i -1 ; j++) {
+    for (let j = 0; j < i-1 ; j++) {
       if (arr[j] > arr[j+1]) 
         swap2(arr, j, j+1)
         isSwap = true 

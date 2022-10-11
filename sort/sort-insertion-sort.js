@@ -39,6 +39,15 @@ insertionSort([2,1,9,76,5])
 
 /*
 
+- for 1: iterar a partir do segundo elemento do array;
+  - quardando o valor numa variavel 
+- for 2 aninhado : iteirar a apartir do primeiro elemento do array;
+  - verificando se o valor é maior que o valor instaciado no for 1;
+  - se sim, o indice mais um será atribuido a ao valor da posição anterior.
+  
+
+
+
 
 -----FOR-1-----
 ARRAY: 2,1,9,76,4

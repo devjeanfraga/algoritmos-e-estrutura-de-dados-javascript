@@ -19,12 +19,19 @@ class GraphAdjacencyMatrix {
     this.adjacencyMatrix[idx2][idx1] = 1;
     return { matrix:this.adjacencyMatrix, index: this.vtexIndex}
   }
+
+  isConnected (vtex1, vtex2) {
+    if(this.adjacencyMatrix.length)
+      return !!this.adjacencyMatrix[this.vtexIndex[vtex1]][this.vtexIndex[vtex2]];
+    else return null;
+  }
 }
 
 const graph =  new GraphAdjacencyMatrix();
 console.log(graph.addVertex("A"));
 console.log(graph.addVertex("B"));
 console.log(graph.addEdge("A","B"));
+console.log(graph.isConnected("A","B"));
 
 
 
