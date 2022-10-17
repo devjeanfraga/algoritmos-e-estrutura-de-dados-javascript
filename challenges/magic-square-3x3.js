@@ -11,68 +11,56 @@ given a 3X3 matrix of integer inclusive range [1,9]
 
 */
 
-function solution(arr) {
+function solution(s) {
   let middle = 5;
+  let diff, cost = [];
+  let current, sum = 0;
 
-  let diff, cost = 0;
-  let temp, index;
-
-  let pair = [middle+3, middle-3, middle+1, middle-1];
-  let odd = [middle+4, middle-4, middle+2, middle-2];
+  // const sumHelper = ( arr, j, k) => {
+  //   let res;
+  //   if (k % 2 === 0 ) {
+  //   !arr[j][k+1] && !arr[j][k+2]
+  //     ? res = (arr[j][k] + arr[j][k-1] + arr[j][k-2]) 
+  //     : (res = arr[j][k] + arr[j][k+1] + arr[j][k+2])      
+  //   } else res = arr[j][k] + arr[j][k+1] + arr[j][k-1]
+  //   return res;
+  // }
   
-  const indexOf = (ar, search) => {
-   for (let i in ar) {
-    if(ar[i] === search) return i;
-    else return false;
-   }
-  }
+ // HANDLE MIDDLE SQUARE
+  if (s[1][1] !== middle ) {
+    current = s[1][1];
+    s[1][1] = middle;
+    diff = s[1][1] - current;      
+    cost.push(Math.abs(diff));
+  };
 
- const sum = (l,k) => {
-  let res;
-  if (k % 2 === 0 ) {
-  !arr[l][k+1] && !arr[l][k+2]
-     ? res = (arr[l][k] + arr[l][k-1] + arr[l][k-2]) 
-     : (res = arr[l][k] + arr[l][k+1] + arr[l][k+2])      
-  } else res = arr[l][k] + arr[l][k+1] + arr[l][k-1]
-  return res;
- }
 
- for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-
-      // HANDLE MIDDLE SQUARE
-      if ((i === 1 && j === 1) && arr[i][j] !== middle) arr[i][j] =  middle; 
-    
-      // HANDLE PAIR LINES AND PAIR COLUMNS
-      if (i % 2 === 0 && j % 2 === 0 ) {
-        if (!pair.includes(arr[i][j])) {
-          temp = arr[i][j];
-          diff = 15 - sum(i,j);
-          arr[i][j] = diff + temp ;
-          index = indexOf(pair, arr[i][j])
-          if (index) pair[index] = null;
-          cost += diff;
-        }
+ for (let i = 0; i < 3; i++ ) {
+  if(i % 2 === 0 ) {
+    if ( s[0][i] % 2 === 0 ) {
+      if(s[0][i] === (5 + 3 || 5 - 3) ) {
+        let newEnd = 5 + 1 
+        s[0][2] === newEnd ? s[0][2] : newEnd =  5 - 1;
+        s[0][2] === newEnd ? s[0][2] : s[0][2] = newEnd; 
       } else {
-        // HANDLE ODD LINE AND ODD COLUMNS
-        if (!odd.includes(arr[i][j])) {
-          temp = arr[i][j];
-          diff = 15 - sum(i,j)
-
-          if ((diff + temp)%2 === 0) (arr[i][j] = temp, diff = 0)
-          else arr[i][j] = diff + temp;
-
-          index = indexOf(odd, arr[i][j])
-          if (index) odd[index] = null;
-
-          cost += diff;
-        }       
-      };       
+        let newstart =  5 + 1;
+        s[0][i] === newstart ? s[0][i] : newstart =  5 - 1;
+        s[0][i] === newstart ? s[0][i] : s[0][0] =  newstart; 
+      }   
+    } else { //SE O VALOR FOR IMPAR
+      let arr = s[0]
+      if (i === 0 && arr[i] === arr[i+2]) {
+        arr[i] = arr[i] + 1;
+        arr[i+2] = arr[i+2] - 1;
+        arr[i+2] === 0 ? arr[i+2] = arr[i+2] + 4: arr[i+2];
+        
+      } else if (i % 2 === 0) (s[0][i] < 9 && s[0][i] >= 1) ? s[0][i] = s[0][i] + 1 : s[0][i] = s[0][i] - 1;
     }
   }
-  return cost;
 }
-
+  
+  return s;
+}
 
 const matrix = [
 [5,3,4],
