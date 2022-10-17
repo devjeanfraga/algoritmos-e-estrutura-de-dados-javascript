@@ -56,7 +56,7 @@ function solution(s) {
         
       } else if (i % 2 === 0) (s[0][i] < 9 && s[0][i] >= 1) ? s[0][i] = s[0][i] + 1 : s[0][i] = s[0][i] - 1;
     }
-  }
+  } else s[0][i] = 15 - (s[0][i-1] + s[0][i+1]);
 }
   
   return s;
