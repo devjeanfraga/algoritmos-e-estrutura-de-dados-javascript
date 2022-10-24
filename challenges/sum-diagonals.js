@@ -36,3 +36,5 @@ let matrix = [
   ]
 
 console.log(solution(arr1));
+
+let arr =  Array.from()
