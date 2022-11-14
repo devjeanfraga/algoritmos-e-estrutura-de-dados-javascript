@@ -12,12 +12,22 @@ given a 3X3 matrix of integer inclusive range [1,9]
 */
 
 function solution(s) {
-  let middle = 5, cost = 0, squares = [];
+  let cost = +Infinity, squares = [];
   let magicSquare = [ 
-   [8,3,4], 
-   [1,5,9], 
-   [6,7,2] ];
-  
+   [8,1,6], 
+   [3,5,7], 
+   [4,9,2]
+  ];
+
+  const reverse = (arr) => {
+   let size = arr.length-1;
+   for (let i = 0; i < (size/2); i++) {
+    let temp = arr[i];
+    arr[i] = arr[size-i];
+    arr[size-i] = temp; 
+   }
+   return arr; 
+  } 
   //flatten
   const flatten = (arr) => {
     let list = [];
@@ -29,13 +39,14 @@ function solution(s) {
 
   // Rotation to generate magic squares
   const generateMagicSquares = ( magicSqr = magicSquare, counter = 1, pos = 0) => {
+   
    // Deep Copy
    let arr = JSON.parse(JSON.stringify(magicSqr));
    let temp;
    
-   if (counter > 8) return;
-   if (counter > 4) magicSqr = magicSqr.map(i => i.reverse()) 
-   
+   if (counter > 4) return;
+
+   // Transpose 
    temp = arr[pos][2];
    arr[pos][2] = arr[pos+2][0];
    arr[pos+2][0] = temp; 
@@ -48,27 +59,42 @@ function solution(s) {
    arr[pos+1][2] = arr[pos+2][1];
    arr[pos+2][1] = temp; 
 
-   counter < 5 ? arr = arr.map(i => i.reverse()) : arr ;
+   arr = arr.map(i => reverse(i))
    squares.push(arr)
+
+   // reflete magic squares 
+   if ( squares.length >= 4 ) {
+     for (let i = 0; i < 4; i++) {
+       let elReverse = JSON.parse(JSON.stringify(squares[i]))
+       elReverse = reverse(elReverse);
+       squares.push(elReverse);
+     }
+   };
    
    counter = counter+1
    generateMagicSquares(arr, counter);
   }
 
+  // flatten input and generate magic squares
   s = flatten(s) 
   generateMagicSquares()
 
-  for (let i = 0; i < squares.length; i++) {
-   
+  // solution step
+  for (let i = 0; i < 8; i++) {
+    let sqr = flatten(squares[i]);
+    let currentCost = 0
+    for (let j = 0; j < s.length; j++) {
+      currentCost+= Math.abs(sqr[j] - s[j])
+    }
+    cost =  Math.min(cost, currentCost);
   }
-  
 
- return squares;
+ return cost;
 }
 const matrix6 = [
-[8,1,6],
-[3,5,7],
+[7,1,6],
+[3,2,7],
 [4,9,2]
 ];
 
-solution(matrix6);
+console.log(solution(matrix6));
