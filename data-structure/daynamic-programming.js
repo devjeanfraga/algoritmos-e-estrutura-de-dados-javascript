@@ -1,3 +1,5 @@
+// Fibonacci Fn= Fn-1 + Fn-2;
+
 function noDynamicFibonacci (n) {
  if (n <= 2 ) return 1; 
  return noDynamicFibonacci(n-1) + noDynamicFibonacci(n-1); 
