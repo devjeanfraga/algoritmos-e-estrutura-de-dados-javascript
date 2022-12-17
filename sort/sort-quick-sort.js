@@ -38,4 +38,6 @@ function quickSort (arr, left = 0 , right = arr.length-1) {
 
 quickSort([0.9,3,1,-2,10,8,5,3.5])
 
+// Try do this over 
+
 
