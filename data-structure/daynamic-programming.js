@@ -25,3 +25,11 @@ function fibonacciTabulation (n) {
   return fibNums[n]; 
 }
 
+function dynamicFactorial (n) {
+  let factorNums = [0,1,2];
+  if (factorNums[n] !== undefined) return factorNums[n]
+  for (let i = 2; i <= n; i++) {
+    factorNums[i] = i * factorNums[i-1];
+  }
+  return factorNums[n];
+}
