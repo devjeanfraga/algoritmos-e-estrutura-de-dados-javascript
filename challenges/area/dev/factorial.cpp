@@ -5,10 +5,10 @@ int fatorial(int n);
 
 int main() {
   // Escreva seu código aqui
-  int n; 
-  cin >> n; 
-  int res = fatorial(n);
-  cout << res << endl;
+  // int n; 
+  // cin >> n; 
+  // int res = fatorial(n);
+  cout << "Hallo" << endl;
   return 0;
 };
 

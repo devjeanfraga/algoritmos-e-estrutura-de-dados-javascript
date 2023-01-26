@@ -210,8 +210,53 @@ function convertToNumber (inputs) {
     return arr; 
 }; 
 
-console.log(findEnableSchedules(schedules)); //ar1, ar2, ar3, ar4, 60
+//console.log(findEnableSchedules(schedules)); //ar1, ar2, ar3, ar4, 60
 
+class MinBinaryHeaps {
+  constructor () {
+    this.schedules = [];   
+   }
 
+  swap (arr, idx1, idx2) {
+      let temp = arr[idx1];
+      arr[idx1] = arr[idx2];
+      arr[idx2] = temp;
+  };
+  // Inserir o novo elemento no final da lista
+  // Chamar o método que o fará subir até a sposição correta
+  insert (schedule) {
+      this.schedules.push(schedule);
+      this.bubbleUp();
+      return this.schedules;
+  };
+  // Pegar o ultimo elemento(child) da lista;
+  // Dentro do loop pegar o elemento pai do ultimo elemento, Parent-idx = (idx-1)/2; 
+  bubbleUp () {
+      let idx = this.schedules.length-1;
+      let child = this.schedules[idx]; 
+      while( idx > 0 ) {
+          let parentIdx = (idx-1)/2;
+          let parent = schedules[parentIdx];
+              
+          if(parent[0] === child[0]) {
+              if(parent[1] <= child[1]) break;
+              this.swap(schedules, parentIdx, idx);
+              idx = parentIdx;     
+          };
+
+          if (parent[0] > child[0]) {
+            this.swap(schedules, parentIdx, idx);
+            idx = parentIdx; 
+          } else break; 
+      };
+  };
+   
+};
+
+// ['09:00', '10:30'], ['12:00', '13:00'], ['16:00', '18:00'] ['10:00', '11:30'], ['12:30', '14:30'], ['14:30', '15:00'], ['16:00', '17:00']
+let tree = new MinBinaryHeaps();
+console.log(tree.insert(['09:00', '10:30'])); 
+console.log(tree.insert(['09:00', '10:30'])); 
+console.log(tree.insert(['12:00', '13:00'])); 
 
  
