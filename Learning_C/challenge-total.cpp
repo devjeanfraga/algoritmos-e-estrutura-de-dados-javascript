@@ -7,18 +7,16 @@ int main() {
   cin >> qty; 
   int people[qty];
   
-  for (int i; i <= qty; i++) {
+  for (int i = 0; i < qty; i++) {
 	cin >> people[i]; 
   }; 
   
-  
-  for (int i; i < qty; i++) {
+  for (int i = 0; i < qty; i++) {
 	total += people[i]; 
   };
+  
   cin >> sum; 
-  if (sum == total) cout << "Acertou" << endl;
-  else cout << "Errou" << endl;
- 
+  cout << (sum == total ? "Acertou" : "Errou") << endl;
   return 0;
 }
  /*
