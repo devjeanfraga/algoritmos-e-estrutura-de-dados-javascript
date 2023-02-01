@@ -11,7 +11,4 @@ int main() {
   if (c > a && c > b ) a > b ? res = a : res = b;	
   cout << res << endl;		
   return 0;
-}
-/*
- 9 15 3 
-*/
+}; 

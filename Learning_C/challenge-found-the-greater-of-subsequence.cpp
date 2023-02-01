@@ -19,7 +19,7 @@ int main () {
 			current = 0;
 		};
 		
-		current += 1;
+		current += 1; 
 		j += 1;  	
 	};
 	
