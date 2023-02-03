@@ -9,8 +9,12 @@ int main() {
   
   cin >> n;
   
-  if( n > 0 && n <= 35 ) result = 'E';
-  if( n > 35 && n <= 60 ) result = 'D';
+  if( n <= 0 ) result = 'E';
+  else if( n > 0 && n <= 35 ) result = 'D';
+  else if( n > 35 && n <= 60 ) result = 'C';
+  else if( n > 60 && n <= 85 ) result = 'B';
+  else result = 'A';
+  
   cout << result <<  endl; 
   return 0;
 };

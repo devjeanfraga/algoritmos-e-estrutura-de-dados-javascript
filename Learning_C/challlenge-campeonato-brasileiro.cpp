@@ -23,10 +23,7 @@ empate= 1
 empate ? winner = +gols
 input int Cv Ce Cs Fv Fe Fs; 
 campeonato-brasileiro
-
+output char C F = 
 win* Cv
 win* Fv
-
-
-
 */
