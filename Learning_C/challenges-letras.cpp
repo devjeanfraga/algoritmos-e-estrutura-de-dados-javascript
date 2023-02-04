@@ -11,7 +11,6 @@ int main() {
   	Objetivo retornar o percentual da letra inputada numa cadeia de caracteres; 
   */
   
-  
   string text;  
   int qtyLetter = 0, qtyWords = 0;
   float result;
@@ -23,8 +22,12 @@ int main() {
   
   int i = 0, left = 0;
   char letter = strLetter[0];
-  while (i < text.length()) {
-	if(text[i] == ' ') {
+  
+  /*
+  	acumular a quantidade de palavras e a quantidade de padroes encontrados;
+  */
+  while (i <= text.length()) {
+	if(text[i] == ' ' || text[i] == '\0') {
 		string word = slice(text, left, i);
 		bool pattern = isLetter( letter, word ); 
 		if (pattern) qtyLetter += 1; 
@@ -33,8 +36,12 @@ int main() {
 	};
 	i += 1; 
   };
-  result = (qtyLetter*100)/qtyWords;
-  cout << fixed << setprecision(1) <<result << endl; 
+  
+  /*
+  	calcular o percentual do padrão no texto;
+  */
+  result = (float) (qtyLetter*100)/qtyWords;
+  cout << fixed << setprecision(1) << result << endl; 
   return 0;
 };
 
