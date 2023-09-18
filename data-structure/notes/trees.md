@@ -69,7 +69,8 @@
   - Binary Search Trees arvores que possuem dois filhos sendo o da esquerda o menor e os da direita o maior;
   - Binary Heaps, arvores  onde os nós pais possuem dois filhos: 
     - Max: Sendo o pai sempre o maior. 
-    - Min: Sendo o pai sempre o menor. 
+    - Min: Sendo o pai sempre o menor.
+  **Observação**: Não há uma ordem implícita entre os filhos.
   **Observação**: Antes de ir pro filho da direita o da esquerda deve ser preenchido e vice versa. 
   
 **Exemplo: Max Binary Heap**
