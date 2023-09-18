@@ -27,41 +27,46 @@
 
   ## Breath First Search 
   usada em arvores mais largas que profundas 
+  ```
       ->  10
     ->  6    15
   ->  3  8     20
 
   [10,6,15,3,8,20] 
+  ```
 
 
   ## Depth First Pre Order Solution
   usada em arvores de pesquisa binária para clonar ou copiar a estrutura da árvore
+  ```
            ↓
        ↓   10  ↓
     ↓  6  ↓    15 ↓
     3     8       20
 
-  [10,6,3,8,15,20]    
+  [10,6,3,8,15,20]   
+  ``` 
 
   ## Depth First Post Order Solution
-
+  ```
            10  
        6   ↑  15 
     3  ↑  8   ↑   20
     ↑     ↑       ↑
 
-  [3,8,6,20,15,10] 
+  [3,8,6,20,15,10]
+  ``` 
 
 ## Depth First In Order Solution
   usada em arvores de pesquisa binária para recuperar os dados em ordem crescente. 
-
+  ```
           10  
       6   ↑  15 
    3  ↑  8   ↑   20
    ↑     ↑       ↑
 
-[3,6,8,10,15,20]    
-
+[3,6,8,10,15,20]   
+  ```
 
 ## Binary Heaps 
 ##### Diferenças 
@@ -70,14 +75,16 @@
   - Binary Heaps, arvores  onde os nós pais possuem dois filhos: 
     - Max: Sendo o pai sempre o maior. 
     - Min: Sendo o pai sempre o menor.
-  **Observação**: Não há uma ordem implícita entre os filhos.
-  **Observação**: Antes de ir pro filho da direita o da esquerda deve ser preenchido e vice versa. 
+    - **Observação**: Não há uma ordem implícita entre os filhos.
+    - **Observação**: Antes de ir pro filho da direita o da esquerda deve ser preenchido e vice versa. 
   
 **Exemplo: Max Binary Heap**
+```
        40
     39    35
   38 31 24 30
 19 32 
+```
 
 ## Priority Queues
   Geralmente implementada com Binary Heaps usando a propriedade priority; 
