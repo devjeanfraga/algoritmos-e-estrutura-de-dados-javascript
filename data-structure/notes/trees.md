@@ -90,6 +90,6 @@
   Geralmente implementada com Binary Heaps usando a propriedade priority; 
   *focada em insert e extract*
 #### Big  O notation 
-  insert  **O(logN)**
-  extract **O(logN)**
-  search  **O(N)**
+  - insert  **O(logN)**
+  - extract **O(logN)**
+  - search  **O(N)**
